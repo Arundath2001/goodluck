@@ -5,9 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: radial-gradient(circle, rgba(196,163,238,1) 0%, rgba(255,255,255,1) 100%);
+
+  font-family: "Montserrat", sans-serif;
+
+  padding: 20px;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0px;
 }
+
+

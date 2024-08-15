@@ -84,6 +84,7 @@ const WinnerSelection = () => {
             scrolling="no"
             allowTransparency="true"
             style={{ border: 'none', overflow: 'hidden', marginTop: '10px' }}
+            title='example'
           ></iframe>
         </div>
       )}

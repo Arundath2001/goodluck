@@ -36,7 +36,7 @@ const Register = () => {
   const handleSendOtp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/send-otp', { email });
+      await axios.post('https://pumped-platinum-digit.glitch.me/send-otp', { email });
       setOtpSent(true);
       setOtpExpiry(new Date().getTime() + 10 * 60 * 1000); // Set expiry time to 10 minutes
       alert('OTP sent to your email');
@@ -48,7 +48,7 @@ const Register = () => {
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/verify-otp', { email, otp });
+      await axios.post('https://pumped-platinum-digit.glitch.me/verify-otp', { email, otp });
       setOtpVerified(true);
       alert('OTP verified successfully');
     } catch (err) {
@@ -63,7 +63,7 @@ const Register = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:5000/register', { username, password, email, phone, otp });
+      await axios.post('https://pumped-platinum-digit.glitch.me/register', { username, password, email, phone, otp });
       alert('Registration successful');
     } catch (err) {
       alert('Registration failed');

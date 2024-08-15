@@ -32,7 +32,7 @@ const CreateGiveaway = () => {
 
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.post('http://localhost:5000/create-giveaway', giveawayData, {
+        const response = await axios.post('https://pumped-platinum-digit.glitch.me/create-giveaway', giveawayData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

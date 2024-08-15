@@ -14,7 +14,7 @@ const WinnerSelection = () => {
     const fetchParticipantCount = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/giveaway-participants/${roomId}`, {
+        const response = await axios.get(`https://pumped-platinum-digit.glitch.me/giveaway-participants/${roomId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -33,7 +33,7 @@ const WinnerSelection = () => {
     setDisplayNumber('0000000'); // Reset the display number before the animation
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:5000/random-participant/${roomId}`, {
+      const response = await axios.get(`https://pumped-platinum-digit.glitch.me/random-participant/${roomId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -11,7 +11,7 @@ const GiveawayCredentialsPage = () => {
     const fetchGiveaway = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/giveaway-details/${roomId}`, {
+        const response = await axios.get(`https://pumped-platinum-digit.glitch.me/giveaway-details/${roomId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

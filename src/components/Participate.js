@@ -12,7 +12,7 @@ const Participate = (props) => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5000/validate-room', { roomId, password }, {
+      const response = await axios.post('https://pumped-platinum-digit.glitch.me/validate-room', { roomId, password }, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

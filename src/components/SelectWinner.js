@@ -13,7 +13,7 @@ const SelectWinner = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/validate-room',
+        'https://pumped-platinum-digit.glitch.me/validate-room',
         { roomId, password },
         {
           headers: {
@@ -23,7 +23,7 @@ const SelectWinner = () => {
       );
 
       // If validation is successful, check if the user is the creator of the giveaway
-      const creatorResponse = await axios.get(`http://localhost:5000/giveaway-details/${roomId}`, {
+      const creatorResponse = await axios.get(`https://pumped-platinum-digit.glitch.me/giveaway-details/${roomId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

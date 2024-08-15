@@ -11,7 +11,7 @@ const ChangePassword = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/change-password-logged-in', { currentPassword, newPassword }, {
+      await axios.post('https://pumped-platinum-digit.glitch.me/change-password-logged-in', { currentPassword, newPassword }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('Password changed successfully');

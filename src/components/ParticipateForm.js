@@ -18,7 +18,7 @@ const ParticipateForm = () => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/user-details', {
+        const response = await axios.get('https://pumped-platinum-digit.glitch.me/user-details', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -67,7 +67,7 @@ const ParticipateForm = () => {
         });
       }));
 
-      await axios.post('http://localhost:5000/participate', {
+      await axios.post('https://pumped-platinum-digit.glitch.me/participate', {
         roomId,
         phone,
         instaName,

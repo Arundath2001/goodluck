@@ -14,7 +14,7 @@ const ParticipatePreview = () => {
     const fetchParticipationDetails = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/participation-preview/user/${userId}/${roomId}`, {
+        const response = await axios.get(`https://pumped-platinum-digit.glitch.me/participation-preview/user/${userId}/${roomId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

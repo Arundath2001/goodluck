@@ -25,7 +25,7 @@ const Home = () => {
     const fetchUserDetails = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/user-details', {
+        const response = await axios.get('https://pumped-platinum-digit.glitch.me/user-details', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -40,7 +40,7 @@ const Home = () => {
     const fetchMessage = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/home', {
+        const response = await axios.get('https://pumped-platinum-digit.glitch.me/home', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

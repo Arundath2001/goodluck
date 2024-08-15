@@ -13,7 +13,7 @@ const ForgotPassword = () => {
 
   const handleSendOtp = async () => {
     try {
-      await axios.post('http://localhost:5000/send-otp', { email });
+      await axios.post('https://pumped-platinum-digit.glitch.me/send-otp', { email });
       setOtpSent(true);
       const timer = setInterval(() => {
         setCountdown((prevCountdown) => {
@@ -32,7 +32,7 @@ const ForgotPassword = () => {
 
   const handleVerifyOtp = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/verify-otp', { email, otp });
+      const response = await axios.post('https://pumped-platinum-digit.glitch.me/verify-otp', { email, otp });
       if (response.data.success) {
         setOtpVerified(true);
       } else {
@@ -46,7 +46,7 @@ const ForgotPassword = () => {
   const handleChangePassword = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/change-password', { email, newPassword });
+      await axios.post('https://pumped-platinum-digit.glitch.me/change-password', { email, newPassword });
       alert('Password changed successfully');
       navigate('/login');
     } catch (err) {
